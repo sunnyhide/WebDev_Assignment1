@@ -1,0 +1,133 @@
+﻿
+/* Header text */
+.header-div {
+    font-family: serif; /* make the font serif */
+    font-size: 32pt; /* set font size to 32pt */
+    text-align: center; /* center text*/
+    margin-top: 50px; /*space*/
+    margin-bottom: 20px;
+}
+/*standard body text*/
+.body-div {
+    font-family: Arial, sans-serif; /*set font to arial*/
+    font-size: 16pt; /* set font size to 12pt */
+    text-align: center;
+    margin-top: 30px; /* create space*/
+}
+/* About me section */
+.about-sec {
+    display: flex;                         /* use flexbox for layout */
+    align-items: center;                  /* center items vertically */
+    justify-content: space-between;        /* space between the text and image */
+    max-width: 800px;                     /* max width for the section */
+    margin: 20px auto;                    /* center the section horizontally */
+    padding: 20px;                        /* padding around the section */
+}
+
+.about-text {
+    flex: 1;                              /* allow text to take available space */
+    text-align: left;                     /* align text to the left */
+    margin-right: 20px;                   /* space between text and image */
+}
+
+.about-img {
+    float: left; /* float the image to the left */
+    margin-right: 10px; /* space between the image and the text */
+    width: 300px; /* width of the image */
+    height: auto; /* aspect ratio */
+    border-radius: 10px; 
+    margin-left: 15%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* shadow for image */
+}
+
+.resume-button {
+    text-align: center;                   /* center the button text */
+    margin-top: 20px;                     /* space above the button */
+}
+
+/* contact section */
+.contact-sec {
+    font-family: Arial, sans-serif; 
+    font-size: 16pt; 
+    text-align: center;
+    margin-top: 30 px;
+    padding: 20 px;
+    border: 1px solid #6e6e6e; /* create box */
+    border-radius: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.email-prompt {
+    margin-top: 20px; /* Just for better spacing */
+}
+/* Email enter box */
+input[type="email"] {
+    padding: 10px; /* padding inside  */
+    margin-top: 20px; /* space above */
+    margin-bottom: 10px; /* space below */
+    border: 1px solid #ccc; /* light gray border */
+    border-radius: 5px; /* rounded corners */
+    width: 100%; /* full width */
+    max-width: 300px; /* max width */
+}
+
+button {
+    padding: 10px 20px; /* padding  */
+    border: none; 
+    border-radius: 5px; /* rounded corners */
+    background-color: #000; /* black background */
+    color: white; /* white text */
+    cursor: pointer; /* pointer cursor on hover */
+}
+
+/* change color on hover */
+button:hover {
+    background-color: #555; /* lighter background on hover */
+}
+
+/* Navigation Bar */
+/*centers*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    list-style-type: none; /* remove bullet points */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000; /* black background */
+    position: fixed; /* fixes to top */
+    width: 100%;
+    top: 0; /* positiont to top */
+    display: flex;
+}
+
+/* Navbar items */
+.navbar li {
+    float: left; /* horizontal allignment */
+}
+
+/* Navbar links */
+.navbar li a {
+    display: block;
+    color: white; /* white text */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* remove underline */
+}
+
+/* change color on hover */
+.navbar li a:hover {
+    background-color: #333; /* lighten when hovering */
+}
+
+/* ensure page content doesnt overlap with the fixed navbar */
+.header-div, .body-div {
+    padding-top: 50px; /* avoid content being hidden by the navbar */
+}
+

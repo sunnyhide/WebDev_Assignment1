@@ -1,0 +1,72 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    /* title and css*/
+    <title>Isabella Plymale's Portfolio</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    /*nav bar at top*/ 
+    <nav>
+        <ul class="navbar">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class = "header-div">
+        Contact me here! 
+    </div>
+    <div class = "contact-sec">
+       <div class = "email-prompt">Enter your email here: </div>
+            
+       <form action="/submit-form" method="post">
+        <div class="email-box">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+
+    </div>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', async (event) => {
+            event.preventDefault(); //prevent the default form submission
+    
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value;
+    
+            try {
+                //send the form data to the server using fetch
+                const response = await fetch('/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email }),
+                });
+    
+                //check if the response is okay and then process it
+                if (response.ok) {
+                    const message = await response.text();
+                    document.querySelector('.contact-sec').innerHTML = `<p>${message}</p>`;
+                } else {
+                    document.querySelector('.contact-sec').innerHTML = `<p>There was an error submitting your form. Please try again.</p>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.querySelector('.contact-sec').innerHTML = `<p>There was an error. Please try again later.</p>`;
+            }
+    
+            //clear the form input
+            emailInput.value = '';
+        });
+    </script>
+    
+
+</body>
+</html>
