@@ -14,6 +14,47 @@
     text-align: center;
     margin-top: 30px; /* create space*/
 }
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* responsive grid */
+    gap: 15px; /* spacing between items */
+    padding: 20px; /* space around gallery */
+    max-width: 1200px; /* limit width of gallery */
+    margin: 20px auto; /* center gallery on page */
+}
+
+/* Individual gallery items */
+.gallery a {
+    display: block;
+    overflow: hidden; /* crop image if needed */
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow effect */
+    transition: transform 0.3s ease; /* smooth hover transition */
+}
+
+/* Gallery Section */
+.gallery img {
+    width: 100%; /* make images responsive */
+    height: auto;
+    border-radius: 8px; /* matches container corners */
+}
+
+/* zoom effect on hover */
+.gallery a:hover {
+    transform: scale(1.05); 
+}
+
+/* for small screen */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* stack images on small screens */
+    }
+}
+
+
+
 /* About me section */
 .about-sec {
     display: flex;                         /* use flexbox for layout */
