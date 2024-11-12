@@ -67,7 +67,7 @@
     display: flex;                         /* use flexbox for layout */
     align-items: center;                  /* center items vertically */
     justify-content: space-between;        /* space between the text and image */
-    max-width: 700px;                     /* max width for the section */
+    max-width: 500px;                     /* max width for the section */
     margin: 20px auto;                    /* center the section horizontally */
     padding: 20px;                        /* padding around the section */
 }
