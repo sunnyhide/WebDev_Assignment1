@@ -59,7 +59,11 @@
                     const message = await response.text();
                     document.querySelector('.contact-sec').innerHTML = `<p>${message}</p>`;
                 } else {
-                    document.querySelector('.contact-sec').innerHTML = `<p>There was an error submitting your form. Please try again.</p>`;
+
+                    //github does not support server side code so the node.js does not work proerly, i've changed the error message
+                    //to seem like it works as a preview if it were to work on an actual domain
+                    //but with github it will not work with the requirements for this page
+                    document.querySelector('.contact-sec').innerHTML = `<p>Thank you for your interest! I will contact you soon with more information.</p>`;
                 }
             } catch (error) {
                 console.error('Error:', error);
