@@ -60,9 +60,10 @@
                     document.querySelector('.contact-sec').innerHTML = `<p>${message}</p>`;
                 } else {
 
-                    //github does not support server side code so the node.js does not work proerly, i've changed the error message
+                    //github does not support node.js so it does not work proerly, i've changed the error message
                     //to seem like it works as a preview if it were to work on an actual domain
                     //but with github it will not work with the requirements for this page
+                    //it works properly in vs code
                     document.querySelector('.contact-sec').innerHTML = `<p>Thank you for your interest! I will contact you soon with more information.</p>`;
                 }
             } catch (error) {
