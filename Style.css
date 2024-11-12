@@ -15,7 +15,7 @@
     margin-top: 30px; /* create space*/
 }
 
-/* Gallery Section */
+/* Gallery Section Imgs */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* responsive grid */
@@ -53,7 +53,14 @@
     }
 }
 
-
+/* Divider Line */
+.divider {
+    width: 80%; /* set width to fit within the layout */
+    height: 2px; 
+    background-color: #333; 
+    margin: 30px auto; /* center align with spacing around */
+    opacity: 0.5; /* transparency */
+}
 
 /* About me section */
 .about-sec {
